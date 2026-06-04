@@ -20,7 +20,7 @@ export default async function DashboardPage() {
     .eq('id', user.id)
     .single() as unknown as { data: Profile | null };
 
-  // PRO DEFENSIVE FIX: Prevents layout breaking if profile setup asynchronous lag happens
+  //Prevents layout breaking if profile setup asynchronous lag happens
   const safeProfile: Profile = profile || {
     id: user.id,
     full_name: user.email?.split('@')[0] || 'Agent',

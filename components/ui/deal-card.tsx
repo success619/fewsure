@@ -16,7 +16,7 @@ export function DealCard({ deal, currentUserId }: DealCardProps) {
 
   return (
     <article className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm mb-6">
-      {/* 1. Feed Header: Avatar and Name */}
+      {/* Feed Header: Avatar and Name */}
       <div className="flex items-center justify-between p-4 border-b border-gray-50">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 relative rounded-full overflow-hidden bg-gray-100 flex items-center justify-center border border-gray-200">
@@ -44,7 +44,7 @@ export function DealCard({ deal, currentUserId }: DealCardProps) {
         )}
       </div>
 
-      {/* 2. Multiple Images Support (Horizontal Scroll) */}
+      {/* Multiple Images Support (Horizontal Scroll) */}
       {deal.image_urls && deal.image_urls.length > 0 && (
         <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar bg-gray-50">
           {deal.image_urls.map((imgUrl, idx) => (
@@ -65,7 +65,7 @@ export function DealCard({ deal, currentUserId }: DealCardProps) {
         </div>
       )}
 
-      {/* 3. Post Content */}
+      {/* Post Content */}
       <div className="p-4">
         <h4 className="text-base font-bold text-gray-900 mb-1">{deal.title}</h4>
         <p className="text-xl font-extrabold text-blue-600 mb-2">
@@ -76,7 +76,7 @@ export function DealCard({ deal, currentUserId }: DealCardProps) {
         </p>
       </div>
 
-      {/* 4. Social Interactions */}
+      {/* Social Interactions */}
       <div className="px-4 py-2.5 border-t border-gray-50 flex gap-4">
         <button className="flex items-center gap-1.5 text-gray-500 hover:text-red-500 transition group">
           <Heart className="w-4 h-4 group-hover:scale-110 transition" />

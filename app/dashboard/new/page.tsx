@@ -37,7 +37,7 @@ export default function NewDealPage() {
     try {
       const uploadedImageUrls: string[] = [];
 
-      // 1. Upload Images iteratively to the 'deals' bucket
+      // Upload Images iteratively to the 'deals' bucket
       if (files.length > 0) {
         for (const file of files) {
           const fileExt = file.name.split('.').pop();
@@ -54,7 +54,7 @@ export default function NewDealPage() {
         }
       }
 
-      // 2. Insert record into database
+      // Insert record into database
       const { error: dbError } = await supabaseClient
         .from('deals')
         .insert({
@@ -67,7 +67,7 @@ export default function NewDealPage() {
 
       if (dbError) throw dbError;
 
-      // 3. Clear cache and redirect
+      //Clear cache and redirect
       router.refresh(); // CRITICAL: Forces the dashboard to show the new post
       router.push('/dashboard');
       
