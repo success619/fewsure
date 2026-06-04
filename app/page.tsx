@@ -6,7 +6,7 @@ export default function Home() {
       <main className="text-center max-w-2xl">
         {/* Badge Component */}
         <span className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700 ring-1 ring-inset ring-blue-700/10 mb-6">
-          PropTech Ecosystem v16.0
+          PropTech Ecosystem
         </span>
         
         {/* Main Headline */}
@@ -38,8 +38,8 @@ export default function Home() {
       </main>
 
       {/* Footer Meta Details */}
-      <footer className="absolute bottom-6 text-xs text-gray-400">
-        Candidate Assessment Workspace • Generated via Next.js App Architecture
+      <footer className="absolute bottom-6 text-xs text-gray-400 mt-5">
+        Candidate Assessment Workspace
       </footer>
     </div>
   );
